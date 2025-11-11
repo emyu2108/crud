@@ -20,7 +20,7 @@ switch ($method) {
         $data = json_decode(file_get_contents('php://input'), true);
         $stmt = $pdo->prepare("INSERT INTO users (name, email, age) VALUES (?, ?, ?)");
         $stmt->execute([$data['name'], $data['email'], $data['age']]);
-        echo json_encode(['status' => 'ok', 'message' => 'User created']);
+        echo json_encode(['status' => 'ok мок', 'message' => 'User created']);
         break;
 
     default:
